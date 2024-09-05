@@ -1,0 +1,361 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tailwind</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="max-w-screen px-4 py-2 md:p-3">
+      <div class="flex justify-between p-2 pt-1">
+        <!-- Left Part -->
+        <div class="flex space-x-20 min-w-lg p-1">
+          <img src="images/logo.svg" alt="" class="w-29 h-9 mt-2" />
+          <div
+            class="hidden md:flex space-x-6 items-center text-center text-grayishVoilet font-bold"
+          >
+            <h3 class="hover:cursor-pointer hover:text-veryDarkVoilet">
+              Feature
+            </h3>
+            <h3 class="hover:cursor-pointer hover:text-veryDarkVoilet">
+              Pricing
+            </h3>
+            <h3 class="hover:cursor-pointer hover:text-veryDarkVoilet">
+              Resources
+            </h3>
+          </div>
+        </div>
+        <!-- Right Part -->
+        <div class="hidden md:flex items-center p-2 justify-between space-x-6">
+          <h3
+            class="text-grayishVoilet font-bold hover:cursor-pointer hover:text-veryDarkVoilet"
+          >
+            Login
+          </h3>
+          <button
+            class="px-7 py-3 font-bold text-white rounded-full bg-cyan hover:bg-cyanLight"
+          >
+            Sign Up
+          </button>
+        </div>
+        <!-- Hamburger Button -->
+        <div class="md:hidden mt-4">
+          <button
+            type="button"
+            id="menu-btn"
+            class="z-40 block hamburger md:hidden focus:outline-none"
+          >
+            <span class="hamburger-top bg-grayishVoilet"></span>
+            <span class="hamburger-middle bg-grayishVoilet"></span>
+            <span class="hamburger-bottom bg-grayishVoilet"></span>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="menu"
+          class="absolute mx-16 my-16 top-0 left-0 right-0 rounded-lg flex-col self-end hidden max-w-4xl min-h-2xl pt-12 p-6 px-12 space-y-3 font-bold text-white bg-darkVoilet"
+        >
+          <div class="flex flex-col items-center space-y-8">
+            <h3 class="hover:cursor-pointer">Feature</h3>
+            <h3 class="hover:cursor-pointer">Pricing</h3>
+            <h3 class="hover:cursor-pointer">Resources</h3>
+            <div class="w-full p-0.5 bg-grayishVoilet"></div>
+            <h3 class="hover:cursor-pointer text-lg">Login</h3>
+            <button
+              class="px-7 py-3 font-bold text-white rounded-full bg-cyan hover:bg-cyanLight w-full"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <div
+      class="flex flex-col items-center justify-between space-y-18 p-3 md:flex-row md:space-y-0 md:space-x-22 mt-4 md:mt-12"
+    >
+      <img
+        src="images/illustration-working.svg"
+        alt=""
+        class="md:hidden px-3"
+      />
+      <div
+        class="flex flex-col items-center space-y-10 p-3 md-flex-row mt-16 md:items-start"
+      >
+        <h1
+          class="font-bold text-veryDarkVoilet text-center text-5xl max-w-md lg:text-6xl lg:text-left"
+        >
+          More than just shorter links
+        </h1>
+        <h3
+          class="max-w-md text-grayishVoilet text-2xl text-center lg:text-left"
+        >
+          Build your brand's recognition and get detailed insights on how your
+          links are performing.
+        </h3>
+        <a
+          href="#"
+          class="px-10 py-5 font-bold text-white rounded-full bg-cyan hover:bg-cyanLight text-2xl lg:py-4"
+        >
+          Get Started
+        </a>
+      </div>
+      <img
+        src="images/illustration-working.svg"
+        alt=""
+        class="px-3 hidden md:block"
+      />
+    </div>
+    <!-- Link Section -->
+    <div class="max-w-screen p-2 bg-gray-100 mt-32">
+      <div class="flex flex-col max-w-4xl items-center mx-4 md:mx-auto">
+        <!-- Upper Form -->
+        <form
+          action="#"
+          class="relative flex flex-col items-center justify-center w-full -mt-20 space-y-4 md:space-y-0 md:flex-row md:space-x-3 bg-darkVoilet p-10 rounded-lg"
+        >
+          <input
+            type="text"
+            id="input"
+            placeholder="Shorten a link here"
+            class="md:flex-1 w-full px-3 py-3 border-2 rounded-lg placeholder-amber-500 placeholder:p-2 placeholder:py-4 focus:outline-none"
+          />
+          <button
+            class="w-full md:w-44 px-9 py-3 bg-cyan hover:bg-cyanLight rounded-lg text-white text-lg"
+          >
+            Shorten It!
+          </button>
+        </form>
+        <!-- Lower 1st Form -->
+        <div
+          class="flex flex-col items-center md:flex-row justify-between p-6 mt-3 w-full rounded-lg bg-white"
+        >
+          <p class="font-bold text-veryDarkVoilet text-center md:text-left">
+            https://frontendmentor.io
+          </p>
+          <div
+            class="flex flex-col md:flex-row items-center md:space-x-4 justify-center"
+          >
+            <p class="font-bold text-center text-cyan mt-4">
+              https://rel.ink/k4IKyk
+            </p>
+            <a
+              href="#"
+              class="px-8 py-2 mt-3 bg-cyan rounded-lg text-white hover:bg-cyanLight"
+              >Copy</a
+            >
+          </div>
+        </div>
+        <!-- Lower 2nd Form -->
+        <div
+          class="flex flex-col items-center md:flex-row justify-between p-6 mt-6 w-full rounded-lg bg-white"
+        >
+          <p class="font-bold text-veryDarkVoilet text-center md:text-left">
+            https://twitter.com/frontendmentor
+          </p>
+          <div
+            class="flex flex-col md:flex-row items-center md:space-x-4 justify-center"
+          >
+            <p class="font-bold text-center text-cyan mt-4">
+              https://rel.ink/gxOXp9
+            </p>
+            <a
+              href="#"
+              class="px-8 py-2 mt-3 bg-darkVoilet rounded-lg text-white hover:opacity-80"
+              >Copy</a
+            >
+          </div>
+        </div>
+        <!-- Lower 3rd Form -->
+        <div
+          class="flex flex-col items-center md:flex-row justify-between p-6 mt-6 w-full rounded-lg bg-white mb-28"
+        >
+          <p class="font-bold text-veryDarkVoilet text-center md:text-left">
+            https://linkedin.com/frontend-mentor
+          </p>
+          <div
+            class="flex flex-col md:flex-row items-center md:space-x-4 justify-center"
+          >
+            <p class="font-bold text-center text-cyan mt-4">
+              https://rel.ink/gob3X9
+            </p>
+            <a
+              href="#"
+              class="px-8 py-2 mt-3 bg-cyan rounded-lg text-white hover:bg-cyanLight"
+              >Copy</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Statistics section -->
+      <div class="flex flex-col items-center justify-centre mx-auto mb-24">
+        <h1 class="font-bold text-veryDarkVoilet text-4xl mb-6">
+          Advanced Statistics
+        </h1>
+        <p class="text-grayishVoilet text-md text-center max-w-xs md:max-w-md">
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+      </div>
+      <!-- Feature Section -->
+      <div
+        class="relative flex flex-col items-center justify-between md:flex-row w-full mt-36 p-6 mb-32"
+      >
+        <!--Horizontal line-->
+        <div
+          class="hidden absolute top-24 w-10/12 left-16 h-3 bg-cyan md:block"
+        ></div>
+        <!-- Vertical Line -->
+        <div class="absolute w-2 left-1/2 h-3/4 -ml-1 bg-cyan md:hidden"></div>
+        <!--Item 1-->
+        <div
+          class="relative flex flex-col items-center space-y-6 p-6 max-w-lg bg-white rounded-lg md:-mt-24 md:w-1/3 mb-24 md:mb-0"
+        >
+          <div
+            class="flex items-center justify-center w-20 h-20 rounded-full bg-veryDarkVoilet -mt-16"
+          >
+            <img src="images/icon-brand-recognition.svg" alt="" />
+          </div>
+          <h2 class="font-bold text-xl text-veryDarkVoilet">
+            Brand Recognition
+          </h2>
+          <p class="max-w-sm md:max-w-md text-grayishVoilet text-center">
+            Boost your brand recognition with each click. Generic links don't
+            mean a thing. Branded links help instil confidence in your content.
+          </p>
+        </div>
+        <!-- Item 2 -->
+        <div
+          class="relative flex flex-col items-center space-y-6 p-6 max-w-lg bg-white rounded-lg md:ml-16 md:-mt-12 md:w-1/3 mb-24 md:mb-0"
+        >
+          <div
+            class="flex items-center justify-center w-20 h-20 rounded-full bg-veryDarkVoilet -mt-16"
+          >
+            <img src="images/icon-detailed-records.svg" alt="" />
+          </div>
+          <h2 class="font-bold text-xl text-veryDarkVoilet">
+            Detailed Records
+          </h2>
+          <p class="max-w-sm md:max-w-md text-grayishVoilet text-center">
+            Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better decisions.
+          </p>
+        </div>
+        <!-- Item 3 -->
+        <div
+          class="relative flex flex-col items-center space-y-6 p-6 max-w-lg bg-white rounded-lg md:-mt-1 md:w-1/3 md:ml-16 mb-24 md:mb-0"
+        >
+          <div
+            class="flex items-center justify-center w-20 h-20 rounded-full bg-veryDarkVoilet -mt-16"
+          >
+            <img src="images/icon-fully-customizable.svg" alt="" />
+          </div>
+          <h2 class="font-bold text-xl text-veryDarkVoilet">
+            Fully Customizable
+          </h2>
+          <p class="max-w-sm md:max-w-md text-grayishVoilet text-center">
+            Improve brand awareness and content discoverability through
+            customizable links, supercharging audience engagement.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Lower Design Section -->
+    <!-- Mobile viwe -->
+    <section id="lowerDesignMobile" class="py-24 bg-darkVoilet md:hidden">
+      <div class="flex flex-col items-center justify-center p-2 space-y-6">
+        <h2 class="text-4xl text-white font-bold">Boost your links today</h2>
+        <button
+          class="px-10 py-5 bg-cyan text-white font-bold text-2xl rounded-full mx-auto md:text-base md:py-3 focus:outline-none"
+        >
+          Get Started
+        </button>
+      </div>
+    </section>
+    <!-- Desktop View -->
+    <section
+      id="lowerDesignDesktop"
+      class="py-24 bg-darkVoilet hidden md:block"
+    >
+      <div class="flex flex-col items-center justify-center p-2 space-y-6">
+        <h2 class="text-4xl text-white font-bold">Boost your links today</h2>
+        <button
+          class="px-10 py-5 bg-cyan text-white font-bold text-2xl rounded-full mx-auto md:text-base md:py-3 focus:outline-none"
+        >
+          Get Started
+        </button>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer" class="py-16 bg-veryDarkVoilet">
+      <div
+        class="flex flex-col items-center justify-between space-y-16 mx-auto md:flex-row md:items-start md:space-y-0"
+      >
+        <img src="images/logo.svg" alt="" />
+        <!-- Menu Container -->
+        <div
+          class="flex flex-col space-y-16 md:flex-row md:space-x-20 md:space-y-0"
+        >
+          <!-- Menu 1 -->
+          <div class="flex flex-col items-center md:items-start">
+            <div class="mb-5 font-bold text-white">Features</div>
+            <div class="flex flex-col items-center space-y-3 md:items-start">
+              <a href="#" class="text-grayishVoilet hover:text-cyan"
+                >Link Shortening</a
+              >
+              <a href="#" class="text-grayishVoilet hover:text-cyan"
+                >Branded Links</a
+              >
+              <a href="#" class="text-grayishVoilet hover:text-cyan"
+                >Analytics</a
+              >
+            </div>
+          </div>
+          <!-- Menu 2 -->
+          <div class="flex flex-col items-center md:items-start">
+            <div class="mb-5 font-bold text-white">Resources</div>
+            <div class="flex flex-col items-center space-y-3 md:items-start">
+              <a href="#" class="text-grayishVoilet hover:text-cyan">Blog</a>
+              <a href="#" class="text-grayishVoilet hover:text-cyan"
+                >Developers</a
+              >
+              <a href="#" class="text-grayishVoilet hover:text-cyan">Support</a>
+            </div>
+          </div>
+          <!-- Menu 3 -->
+          <div class="flex flex-col items-center md:items-start">
+            <div class="mb-5 font-bold text-white">Company</div>
+            <div class="flex flex-col items-center space-y-3 md:items-start">
+              <a href="#" class="text-grayishVoilet hover:text-cyan">About</a>
+              <a href="#" class="text-grayishVoilet hover:text-cyan"
+                >Our Team</a
+              >
+              <a href="#" class="text-grayishVoilet hover:text-cyan">Careers</a>
+              <a href="#" class="text-grayishVoilet hover:text-cyan">Contact</a>
+            </div>
+          </div>
+        </div>
+        <!-- Social Icons -->
+        <div class="flex space-x-6">
+          <img src="images/icon-facebook.svg" alt="" class="cursor-pointer" />
+          <img src="images/icon-twitter.svg" alt="" class="cursor-pointer" />
+          <img src="images/icon-pinterest.svg" alt="" class="cursor-pointer" />
+          <img src="images/icon-instagram.svg" alt="" class="cursor-pointer" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
